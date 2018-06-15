@@ -1,6 +1,12 @@
-spring.boot.admin.url: http://localhost:8080
-spring.boot.admin.username: admin
-spring.boot.admin.password: admin
-management.security.enabled: false
+spring: 
+  boot: 
+    admin: 
+      username: user
+      password: admin
 
-server.port: 8081
+management: 
+  security: 
+    enabled: false
+
+server: 
+  port: 8081
