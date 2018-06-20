@@ -1,7 +1,7 @@
 spring: 
   boot: 
     admin: 
-      url: http://spring-boot-admin-service:8080
+      url: http://spring-boot-admin-service.local:8080
       username: user
       password: admin
 
