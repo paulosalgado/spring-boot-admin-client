@@ -5,9 +5,5 @@ spring:
       username: user
       password: admin
 
-management: 
-  security: 
-    enabled: false
-
 server: 
   port: 8081
