@@ -1,13 +1,15 @@
-management: 
-  security: 
-enabled: false
-
 spring: 
+  application: 
+    name: spring-boot-admin-client
   boot: 
     admin: 
-      url: http://spring-boot-admin-service.local:8080
+      url: http://localhost:8080
       username: user
       password: admin
 
 server: 
   port: 8081
+
+management: 
+  security: 
+    enabled: false
