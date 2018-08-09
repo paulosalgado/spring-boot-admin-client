@@ -3,7 +3,7 @@ spring:
     name: spring-boot-admin-client
   boot: 
     admin: 
-      url: http://localhost:8080
+      url: http://spring-boot-admin-service.ecs-cluster:8080
       username: user
       password: admin
 
