@@ -1,7 +1,7 @@
 buildscript {
 	
 	ext {
-		springBootVersion = '1.5.6.RELEASE'
+		springBootVersion = '1.5.21.RELEASE'
 	}
 	
 	repositories {
@@ -25,12 +25,24 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	springCloudVersion = 'Edgware.SR6'
+	adminVersion = '1.5.7'
+}
+
 dependencies {
 	
 	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.cloud:spring-cloud-starter-consul-discovery')
 	
-	compile group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '1.5.3'
+	compile("de.codecentric:spring-boot-admin-starter-client:${adminVersion}")
 	
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
 }
